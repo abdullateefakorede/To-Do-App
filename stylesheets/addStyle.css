@@ -1,0 +1,20 @@
+body {
+    width: 600px;
+    text-align: center;
+    margin: auto;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    background-color: #ffb330;
+}
+
+input {
+    margin-bottom: 24px;
+    width: 100%;
+    height: 36px
+}
+
+button {
+    padding: 5px 16px 5px 16px;
+    width: 50%;
+}

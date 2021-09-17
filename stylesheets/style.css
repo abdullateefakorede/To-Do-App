@@ -1,0 +1,40 @@
+body {
+    width: 1200px;
+    text-align: center;
+    margin: auto;
+    background-color: #ffb330;
+    padding: 24px;
+}
+
+table {
+    border: 1px solid #000;
+    width: 100%;
+    margin-bottom: 24px;
+    border-collapse: collapse;
+}
+
+tr,
+th,
+td {
+    border: 1px solid #000;
+    text-align: center;
+    border-collapse: collapse;
+    padding-left: 12px;
+}
+
+th {
+    padding: 8px 16px 8px 16px;
+}
+
+div {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+div button {
+    padding: 8px 16px 8px 16px;
+}
+
+td input {
+    margin: 8px 16px 8px 16px;
+}

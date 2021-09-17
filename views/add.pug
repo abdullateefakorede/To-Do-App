@@ -1,0 +1,19 @@
+html
+   head
+    title Create ToDo Task
+    style 
+        include ../stylesheets/addStyle.css
+    script 
+        include ../eventScript.js
+   body
+   if(type === "error")
+        h4 #{message}
+   else
+        form(action = "/add/todo" method = "POST" style="width: 80%;")
+            input(name = "toDoName" type = "text" placeholder = "To Do Name" required)
+            br
+            span(style="display:none" id = "dateerror") Please provide a future date
+            br
+            input(name = "dueDate" type = "datetime-local"  placeholder = "Due Date" id = "dateinput" onchange = "frontendValidator()")
+            br
+            button(type = "Submit" id = "addbutton") Create Task! 
