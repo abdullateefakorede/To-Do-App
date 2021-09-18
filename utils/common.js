@@ -8,17 +8,4 @@ function randomFunction(value) {
     return result;
 }
 
-function checkedFunction() {
-    const radioButtons = document.getElementsByName('completed');
-    for (i = 0; i < radioButtons.length; i++) {
-        if (radioButtons[i].value) {
-            console.log(radioButtons[i].value)
-            document.getElementById("yesId").checked = true;
-            return
-        }
-        document.getElementById("noId").checked = true;
-    }
-}
-
 exports.randomFunction = randomFunction;
-exports.checkedFunction = checkedFunction;

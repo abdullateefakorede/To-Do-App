@@ -1,0 +1,38 @@
+html
+   head
+        title ToDo App
+        style 
+            include ../stylesheets/editStyle.css
+        script 
+            include ../eventScript.js
+   body(style="width: 30%;" id = "editForm")
+        if(type === "error")
+            h4 #{message}
+        each element,index in toDoArray
+            form(action=`/todo/${element.ID}`, method="post")
+                div.edit 
+                    label(for="id") ID
+                    input(type="text", name="id" value = `${element.ID}` disabled)
+                div.edit
+                    label(for="toDoName") To-Do
+                    input(name = "toDoName" type = "text" value = `${element.toDoName}` required)
+                div.edit 
+                    label(for="createdDate") Date Created
+                    input(name = "createdDate" type = "text"  value = `${new Date(element.create).toLocaleString()}` disabled)
+                div.edit    
+                    span(style="display:none" id = "editdateerror") Please provide a future date
+                    label(for="dueDate") Due By
+                    input(name = "dueDate" type = "datetime-local"  value = `${element.dueDate}` id = "editdateinput" onchange = "editFrontendValidator()")
+                if (element.complete)
+                    div.radio 
+                        label(for="yes") Yes
+                        input(value="yes" id ="yesId" type="radio" name="completed" checked)
+                        label(for="no") No
+                        input(value="no" id ="noId" type="radio" name="completed" )
+                else 
+                    div.radio
+                        label(for="yes") Yes
+                        input(value="yes" id ="yesId" type="radio" name="completed" )
+                        label(for="no") No
+                        input(value="no" id ="noId" type="radio" name="completed" checked)
+                button(type = "Submit" id = "savebutton") Save
