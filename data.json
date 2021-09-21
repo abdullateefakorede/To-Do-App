@@ -1,65 +1,7 @@
-[
-    {
-        "toDoName": "Go To The Market",
-        "dueDate": "2021-09-24T14:49:00.000Z",
-        "create": "2021-09-15T14:50:17.436Z",
-        "complete": false,
-        "ID": "cZcTQ"
-    },
-    {
-        "toDoName": "Study Codebase",
-        "dueDate": "2021-09-24T14:51:00.000Z",
-        "create": "2021-09-15T14:51:26.512Z",
-        "complete": false,
-        "ID": "usxG6"
-    },
-    {
-        "toDoName": "Study Codebase",
-        "dueDate": "2021-09-25T07:16:00.000Z",
-        "create": "2021-09-17T10:42:07.902Z",
-        "complete": false,
-        "ID": "KMfqh"
-    },
-    {
-        "toDoName": "Go To The Market",
-        "dueDate": "2021-09-24T11:28:00.000Z",
-        "create": "2021-09-17T11:24:15.101Z",
-        "complete": false,
-        "ID": "aMfhU"
-    },
-    {
-        "toDoName": "Go To The Market",
-        "dueDate": "2021-09-25T07:19:00.000Z",
-        "create": "2021-09-17T14:46:45.730Z",
-        "complete": false,
-        "ID": "g1NWe"
-    },
-    {
-        "toDoName": "Go To The Market",
-        "dueDate": "2021-10-01T14:46:00.000Z",
-        "create": "2021-09-17T14:46:55.872Z",
-        "complete": true,
-        "ID": "aEQCH"
-    },
-    {
-        "toDoName": "Go To The Market",
-        "dueDate": "2021-09-25T07:21:00.000Z",
-        "create": "2021-09-17T18:01:22.135Z",
-        "complete": true,
-        "ID": "Q7eFZ"
-    },
-    {
-        "toDoName": "Kobo Set",
-        "dueDate": "2021-09-25T07:22:00.000Z",
-        "create": "2021-09-18T07:22:49.338Z",
-        "complete": false,
-        "ID": "V7TIW"
-    },
-    {
-        "toDoName": "Accessment",
-        "dueDate": "2021-09-29T12:48:00.000Z",
-        "create": "2021-09-20T12:48:46.677Z",
-        "complete": false,
-        "ID": "4hLIO"
-    }
-]
+[{
+    "toDoName": "Go To The Market",
+    "dueDate": "2021-09-24T14:49:00.000Z",
+    "create": "2021-09-15T14:50:17.436Z",
+    "complete": false,
+    "ID": "cZcTQ"
+}]
