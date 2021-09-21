@@ -2,6 +2,7 @@ const { fstat, writeFileSync, appendFile } = require("fs");
 const path = require('path');
 const toDoArray = require("../data.json");
 const { randomFunction } = require("../utils/common")
+
 const addCallBack = (req, res) => {
     res.render("add")
 
@@ -38,7 +39,7 @@ const addPostCallBack = (req, res) => {
     let completedRefactor = Object.assign(addDate, { complete: false })
     let toDoDetails = Object.assign(completedRefactor, { ID: randomID });
     toDoArray.push(toDoDetails);
-    console.log(process.cwd());
+    // console.log(process.cwd());
     const dataPath = path.join(process.cwd(), 'data.json')
     writeFileSync(dataPath, JSON.stringify(toDoArray, null, 4))
     res.redirect('/todo')

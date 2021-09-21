@@ -8,6 +8,8 @@ html
    body
         if(type === "error")
             h4 #{message}
+        div 
+            button(onclick="window.location.href='/add'") Add To-Do List
         table
             tr
                 th(style="width:10%") ID
@@ -22,13 +24,12 @@ html
                     td=element.ID
                     td= element.toDoName
                     td= new Date(element.create).toLocaleString()
-                    td= new Date(element.dueDate).toLocaleString()
+                    td= element.dueDate ? new Date(element.dueDate).toLocaleString() : "N/A"
                     td(value = `${element.complete}` class = "completedInput")= formatComplete(element.complete)
                     td
                         input(type="submit" method ="POST" action= "/edit/:id" value="Edit" onclick=`window.location.href='/edit/${element.ID}'`)
                  
-        div 
-            button(onclick="window.location.href='/add'") Add To-Do List
+
             //- button(type = "Submit" action = "/" method = "POST") Update List
 //-    script
 //-         include ../controllers/addController.js
