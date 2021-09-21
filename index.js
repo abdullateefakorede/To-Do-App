@@ -32,4 +32,4 @@ app.get("/edit/:id", getEdit)
 
 app.post("/todo/:id", toDoValidator, toDoEdit)
 
-app.listen(3001)
+app.listen(process.env.PORT || 3001)
