@@ -24,7 +24,7 @@ app.use(session({
 app.set('view engine', 'pug');
 app.set('views', './views');
 
-app.use('/', add)
+app.use('/add', add)
 app.get("/todo", toDoCallBack)
 app.post("/todo", toDoCallBack)
 
