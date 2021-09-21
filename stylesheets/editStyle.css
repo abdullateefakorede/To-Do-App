@@ -1,87 +1,105 @@
-    body {
-        width: 1200px;
-        text-align: center;
-        margin: auto;
-        background-color: #ffb330;
-        padding: 24px;
-        font-family: 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    }
-    
-    table {
-        border: 1px solid #000;
-        width: 100%;
-        margin-bottom: 24px;
-        border-collapse: collapse;
-    }
-    
-    tr,
-    th,
-    td {
-        border: 1px solid #000;
-        text-align: center;
-        border-collapse: collapse;
-        padding-left: 12px;
-    }
-    
-    th {
-        padding: 8px 16px 8px 16px;
-    }
-    
-    div {
-        display: flex;
-        justify-content: space-between;
-    }
-    
-    button {
-        padding: 8px 16px 8px 16px;
-        margin-top: 8px;
-    }
-    
-    td {
-        padding: 8px 12px 8px 12px;
-    }
-    
+body {
+    width: 1200px;
+    text-align: center;
+    margin: auto;
+    background-color: #ffb330;
+    padding: 24px;
+    font-family: 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+table {
+    border: 1px solid #000;
+    width: 100%;
+    margin-bottom: 24px;
+    border-collapse: collapse;
+}
+
+tr,
+th,
+td {
+    border: 1px solid #000;
+    text-align: center;
+    border-collapse: collapse;
+    padding-left: 12px;
+}
+
+th {
+    padding: 8px 16px 8px 16px;
+}
+
+div {
+    display: flex;
+    justify-content: space-between;
+}
+
+button {
+    padding: 8px 16px 8px 16px;
+    margin-top: 8px;
+    position: fixed;
+    z-index: 99;
+}
+
+td {
+    padding: 8px 12px 8px 12px;
+}
+
+#editForm {
+    text-align: center;
+    margin: auto;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+#editForm {
+    width: 85%;
+}
+
+#yesId {
+    margin-right: 16px;
+}
+
+form {
+    border: 2px solid rgb(255, 255, 255);
+    padding: 16px;
+    justify-content: center;
+}
+
+input {
+    width: 100%;
+}
+
+div.edit {
+    display: grid;
+    justify-content: stretch;
+}
+
+div.radio {
+    display: flex;
+    justify-content: center;
+}
+
+div.radio input {
+    width: unset;
+}
+
+form div {
+    padding: 8px 16px 8px 16px;
+}
+
+.radio input {
+    margin: 6px;
+}
+
+@media only screen and (min-width: 1048px) {
     #editForm {
-        text-align: center;
-        margin: auto;
-        align-items: center;
-        display: flex;
-        justify-content: center;
+        max-width: 30%;
     }
-    
+}
+
+@media only screen and (max-width: 600px) {
     #editForm {
-        width: 70%;
+        width: 90%;
+        max-width: 100%;
     }
-    
-    #yesId {
-        margin-right: 16px;
-    }
-    
-    form {
-        border: 2px solid rgb(255, 255, 255);
-        padding: 16px;
-    }
-    
-    div.edit {
-        display: grid;
-        justify-content: stretch;
-    }
-    
-    div.radio {
-        display: flex;
-        justify-content: center;
-    }
-    
-    form div {
-        padding: 8px 16px 8px 16px;
-    }
-    
-    .radio input {
-        margin: 6px;
-    }
-    
-    @media only screen and (min-width: 1048px) {
-        #editForm {
-            max-width: 30%;
-        }
-    }
+}

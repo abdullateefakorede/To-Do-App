@@ -4,6 +4,7 @@ body {
     margin: auto;
     background-color: #ffb330;
     padding: 24px;
+    overflow-x: auto;
 }
 
 table {
