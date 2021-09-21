@@ -1,22 +1,23 @@
 html
-   head
+    head
         title ToDo App
+        link(href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous")
         style 
             include ../stylesheets/editStyle.css
         script 
             include ../eventScript.js
-   body(style="width: 30%;" id = "editForm")
+    body(id = "editForm")
         if(type === "error")
             h4 #{message}
         each element,index in toDoArray
-            form(action=`/todo/${element.ID}`, method="post")
-                div.edit 
+            form(action=`/todo/${element.ID}`, method="post").container
+                div.edit.form-group
                     label(for="id") ID
                     input(type="text", name="id" value = `${element.ID}` disabled)
-                div.edit
+                div.edit.form-group
                     label(for="toDoName") To-Do
                     input(name = "toDoName" type = "text" value = `${element.toDoName}` required)
-                div.edit 
+                div.edit.form-group
                     label(for="createdDate") Date Created
                     input(name = "createdDate" type = "text"  value = `${new Date(element.create).toLocaleString()}` disabled)
                 div.edit    
@@ -24,15 +25,19 @@ html
                     label(for="dueDate") Due By
                     input(name = "dueDate" type = "datetime-local"  value = `${element.dueDate}` id = "editdateinput" onchange = "editFrontendValidator()")
                 if (element.complete)
-                    div.radio 
+                    span(for="yes") Is the task completed?
+                    div.radio.form-group
                         label(for="yes") Yes
                         input(value="yes" id ="yesId" type="radio" name="completed" checked)
                         label(for="no") No
                         input(value="no" id ="noId" type="radio" name="completed" )
                 else 
-                    div.radio
+                    span(for="yes") Is the task completed?
+                    div.radio.form-group
                         label(for="yes") Yes
                         input(value="yes" id ="yesId" type="radio" name="completed" )
                         label(for="no") No
                         input(value="no" id ="noId" type="radio" name="completed" checked)
                 button(type = "Submit" id = "savebutton") Save
+                
+        script(src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous") 

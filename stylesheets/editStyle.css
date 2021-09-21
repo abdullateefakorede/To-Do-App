@@ -49,6 +49,10 @@
         justify-content: center;
     }
     
+    #editForm {
+        width: 70%;
+    }
+    
     #yesId {
         margin-right: 16px;
     }
@@ -70,4 +74,14 @@
     
     form div {
         padding: 8px 16px 8px 16px;
+    }
+    
+    .radio input {
+        margin: 6px;
+    }
+    
+    @media only screen and (min-width: 1048px) {
+        #editForm {
+            max-width: 30%;
+        }
     }

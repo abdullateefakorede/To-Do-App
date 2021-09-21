@@ -1,6 +1,7 @@
 html
    head
         title ToDo App
+        link(href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous")
         style 
             include ../stylesheets/editStyle.css
         script 
@@ -8,7 +9,7 @@ html
    body
         if(type === "error")
             h4 #{message}
-        table
+        table.container
             tr
                 th(style="width:10%") ID
                 th(style="width:40%") To-Do
@@ -36,6 +37,8 @@ html
                                 input(value="no" id ="noId" type="radio" name="completed" checked)
                                 label(for="no") No
                                 button(type = "Submit") Save
+                                
+        script(src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous") 
                             
 //-    script
 //-         include ../controllers/addController.js

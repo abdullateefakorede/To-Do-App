@@ -1,19 +1,24 @@
 html
-   head
-    title Create ToDo Task
-    style 
-        include ../stylesheets/addStyle.css
-    script 
-        include ../eventScript.js
-   body
-   if(type === "error")
-        h4 #{message}
-   else
-        form(action = "/add/todo" method = "POST" style="width: 80%;")
-            input(name = "toDoName" type = "text" placeholder = "To Do Name" required)
-            br
-            span(style="display:none" id = "dateerror") Please provide a future date
-            br
-            input(name = "dueDate" type = "datetime-local"  placeholder = "Due Date" id = "dateinput" onchange = "frontendValidator()")
-            br
-            button(type = "Submit" id = "addbutton") Create Task! 
+    head
+        title Create ToDo Task
+        link(href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous")
+        style 
+            include ../stylesheets/addStyle.css
+        script 
+            include ../eventScript.js
+    body
+        if(type === "error")
+            h4 #{message}
+        else
+            div.container
+                h3(style="margin-bottom:16px; color:#fff;") To-Do Manager
+                form(action = "/add/todo" method = "POST")
+                    input(name = "toDoName" type = "text" placeholder = "To Do Name" required)
+                    br
+                    span(style="display:none" id = "dateerror") Please provide a future date
+                    br
+                    input(name = "dueDate" type = "datetime-local"  placeholder = "Due Date" id = "dateinput" onchange = "frontendValidator()")
+                    br
+                    button(type = "Submit" id = "addbutton") Create Task! 
+
+        script(src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous") 
