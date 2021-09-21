@@ -35,6 +35,9 @@ div {
 button {
     padding: 8px 16px 8px 16px;
     margin-top: 8px;
+}
+
+#todoButton {
     position: fixed;
     z-index: 99;
 }
