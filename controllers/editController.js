@@ -13,23 +13,6 @@ const getEdit = (req, res) => {
     res.render("editform", { toDoArray: test })
 }
 
-// const toDoEdit = (req, res) => {
-//     const id = req.params.id;
-//     const idIndex = toDoArray.findIndex(element => element.ID === req.params.id);
-//     if (req.body.completed === "yes" || req.body.completed === "true") {
-//         toDoArray[idIndex].complete = true;
-//         const dataPath = path.join(process.cwd(), 'data.json')
-//         writeFileSync(dataPath, JSON.stringify(toDoArray, null, 4))
-//         res.redirect("/todo")
-//         return
-//     }
-//     toDoArray[idIndex].complete = false;
-//     console.log(process.cwd())
-//     const dataPath = path.join(process.cwd(), 'data.json');
-//     writeFileSync(dataPath, JSON.stringify(toDoArray, null, 4));
-//     res.redirect("/todo")
-// }
-
 const toDoEdit = (req, res) => {
     console.log(req.body.dueDate);
     const idIndex = toDoArray.findIndex(element => element.ID === req.params.id);
